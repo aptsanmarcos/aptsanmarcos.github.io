@@ -15,6 +15,7 @@ GENERAL
 */
 html {
   height: 100%;
+  width: 100%;
 }
 body {
   height: 100%;
@@ -1240,13 +1241,15 @@ a:hover{
     background-size: cover;
     transition: 1s opacity;
   }
-  div{width:70%;}
+  div{width:100%;}
+  .row{
+    margin-left: 0px;
+  }
+  .no-space .box{
+    margin: 0%;
+  }
 }
-@media screen and (max-device-width: 800px) {
 
-  html { background: url('/img/fondo.jpg') #000 no-repeat center center fixed; }
-  #bgvid { display: none; }
-}
 @media screen and (max-width: 1000px) {
   video {
     position: fixed;
