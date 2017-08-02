@@ -1301,8 +1301,6 @@ a:hover{
 @media screen and (max-width: 1000px) {
   video {
     position: fixed;
-    min-width: 100%;
-    min-height: 100%;
     top:-10%;
     transform: scale(1.6);
     width: auto;
