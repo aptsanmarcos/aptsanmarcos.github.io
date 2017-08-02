@@ -1227,7 +1227,7 @@ a:hover{
   background: rgb(70, 182, 147) !important;
   color: #fff !important;
 }
-@media screen and (max-width: 500px) {
+@media  (max-width: 500px) {
   video {
     position: fixed;
     min-width: 100%;
@@ -1249,7 +1249,7 @@ a:hover{
     margin: 0%;
   }
 }
-@media  screen and (max-width: 370px)
+@media  (max-width: 370px)
 {
   #logoinicio{
     width: 150px;
