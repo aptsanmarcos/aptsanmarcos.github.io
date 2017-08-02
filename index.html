@@ -27,7 +27,7 @@
   </head>
   <body data-spy="scroll" data-target="#navigation" data-offset="120">
 
-  <video poster="img/fondo.jpg" id="bgvid" playsinline autoplay muted loop>
+  <video poster="img/fondo.jpg" id="bgvid"  autoplay muted loop>
     <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
     <source src="img/videoinicial.mp4" type="video/mp4">
   </video>
@@ -44,16 +44,16 @@
 
               <p class="roboto">promoviendo la producción y comercialización de productos de la biodiversidad como la tara, la quinua, Centeno, maíz morado</p>
                 <div class="col-lg-6 col-lg-offset-3">
-                    <div class="col-md-3 divimage">
+                    <div class="col-md-3 col-xs-3 divimage">
                         <img width="100"  class="img-circle img-responsive imagecircle" src="img/lentejas.jpeg">
                     </div>
-                    <div class="col-md-3 divimage">
+                    <div class="col-md-3 col-xs-3 divimage">
                         <img width="100"  class="img-circle img-responsive imagecircle" src="img/papa.jpg">
                     </div>
-                    <div class="col-md-3 divimage">
+                    <div class="col-md-3 col-xs-3 divimage">
                         <img width="100"  class="img-circle img-responsive imagecircle" src="img/maiz.jpeg">
                     </div>
-                    <div class="col-md-3 divimage">
+                    <div class="col-md-3 col-xs-3 divimage">
                         <img width="100"  class="img-circle img-responsive imagecircle" src="img/centeno.jpg">
                     </div>
                 </div>
@@ -395,6 +395,30 @@
     <script src="js/gmaps.js"></script>
     <script src="js/jquery.cookie.js"></script>
     <script src="js/front.js"></script>
+    <script>
+        var vid = document.getElementById("bgvid");
+
+        if (window.matchMedia('(prefers-reduced-motion)').matches) {
+            vid.removeAttribute("autoplay");
+            vid.pause();
+        }
+
+        function vidFade() {
+            vid.classList.add("stopfade");
+        }
+
+        vid.addEventListener('ended', function()
+        {
+// only functional if "loop" is removed
+            vid.pause();
+// to capture IE10
+            vidFade();
+        });
+
+
+
+
+    </script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
