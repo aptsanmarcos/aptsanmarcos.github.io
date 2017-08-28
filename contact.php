@@ -1,6 +1,6 @@
 <?php
 /* Set e-mail recipient */
-$myemail  = "hbravos@unc.edu.pe";
+$myemail  = "productorestayasanmarcos@gmail.com";
 
 /* Check all form inputs using check_input function */
 $yourname = check_input($_POST['name'], "Enter your name");
@@ -15,35 +15,29 @@ if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email))
     show_error("E-mail address not valid");
 }
 
-/* If URL is not valid set $website to empty */
-if (!preg_match("/^(https?:\/\/+[\w\-]+\.[\w\-]+)/i", $website))
-{
-    $website = '';
-}
+
 
 /* Let's prepare the message for the e-mail */
-$message = "Hello!
+$message = "Hola administrador de APT!
 
-Your contact form has been submitted by:
+Un visitante de su página web necesita contactarse con usted:
 
-Name: $yourname  $surname
-E-mail: $email
-URL: $website
+Nombre del visitante: $yourname  $surname
 
-Like the website? $comments
-How did he/she find it? $how_find
+E-mail/Correo: $email
 
-Comments:
-$comments
+Dejó el mensaje: $comments
 
-End of message
+Gracias por su trabajo!
+
+(Si quiere modificar esta estrucuta comuníquese con ©Developer Bravo's - hbravos.info@gmail.com)
 ";
 
 /* Send the message using mail() function */
 mail($myemail, $subject, $message);
 
 /* Redirect visitor to the thank you page */
-header('Location: thanks.htm');
+header('Location: index.html#thanks');
 exit();
 
 /* Functions we used */

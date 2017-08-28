@@ -31,7 +31,11 @@
     <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
     <source src="img/videoinicial.mp4" type="video/mp4">
   </video>
+  <div class="speaker speakerplay"></div>
 
+  <audio id="player" autoplay loop>
+    <source src="sonds/background.mp3" type="audio/mp3" />
+  </audio>
   <!-- intro-->
     <section id="intro" class="intro image-background">
       <div class="overlay"></div>
@@ -79,8 +83,8 @@
                 <li><a href="#portfolio">Mutimedia</a></li>
                 <li><a href="#historia">Historia</a></li>
                 <li><a href="#contact">Contáctanos</a></li>
-                <li><a href="#">Certificaciones</a></li>
-                <li><a id="plan" href="plan.html">Plan Estratégico</a></li>
+                <li><a href="#">Certificaciones <span style="background: #46b693; color: #fff; padding: 1px">New </span></a></li>
+                <li><a id="plan" href="plan.html">Plan Estratégico <span style="background: #46b693; color: #fff; padding: 1px">New </span></a></li>
               </ul>
             </div>
           </div>
@@ -481,7 +485,12 @@
                 <p> <i class="fa fa-phone-square"></i> Telefonos: (076)558336 Cel.: 976317573 - 981794211</p>
                 <p> <i class="fa fa-mail-forward"></i>Correo: <a style="color:#6c91ff" target="_top" href="mailto:cooperativaaptdelnorte@gmail.com?Subject=Consulta%20desde%20Web">cooperativaaptdelnorte@gmail.com</a> </p>
                 <p> <i class="fa fa-calendar"></i> Horario de atención: Lunes - Sábado / 8:00 AM - 7:00 PM</p>
-                <p class="social"><a href="#" title="" class="facebook"><i class="fa fa-facebook"></i></a><a href="#" title="" class="twitter"><i class="fa fa-twitter"></i></a><a href="#" title="" class="gplus"><i class="fa fa-google-plus"></i></a><a href="#" title="" class="instagram"><i class="fa fa-instagram"></i></a><a href="#" title="" class="email"><i class="fa fa-envelope"></i></a></p>
+                <p class="social">
+                  <a href="https://web.facebook.com/josevictor.quirozcastaneda" target="_blank"title="" class="facebook"><i class="fa fa-facebook"></i></a>
+                  <a href="" title="" class="twitter"><i class="fa fa-twitter"></i></a>
+                  <a href="" title="" class="gplus"><i class="fa fa-google-plus"></i></a>
+                  <a href="" title="" class="instagram"><i class="fa fa-instagram"></i></a>
+                  <a href="" title="" class="email"><i class="fa fa-envelope"></i></a></p>
               </div>
             </div>
           </div>
@@ -567,7 +576,76 @@
       </div>
     </div>
   </section>
+  <!-- Modal -->
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
 
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Gracias por contactarnos</h4>
+        </div>
+        <div class="modal-body">
+          <p>El mensaje ha sido enviado, pronto responderemos por vía electrónica.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">De acuerdo</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- Modal -->
+  <div id="myModalDow" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title">Nuestro repositorio</h2>
+        </div>
+        <div class="modal-body row">
+          <h4 class="heading">Archivos Internos</h4>
+          <div class="col-md-10 col-md-offset-1">
+            <h5>Nuestro Plan Estratégido <a target="_blank" href="descargas/planestrategico.pdf" style="background: #31708f;">DESCARGA AQUÍ</a></h5>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="container-floating">
+
+
+    <div class="nd4 nds" data-toggle="tooltip" data-placement="left" data-original-title="Contáctanos">
+      <a href="#contact"><img class="reminder" src="img/nosotros.png" /></a>
+    </div>
+    <div class="nd3 nds" data-toggle="tooltip" data-placement="left" data-original-title="Facebook">
+      <a href="https://web.facebook.com/josevictor.quirozcastaneda" target="_blank">
+        <span class="edit fa fa-facebook" style="text-align: center; color:#fff; margin-top: -25%"></span>
+
+      </a>
+    </div>
+    <div class="nd1 nds" data-toggle="tooltip" data-placement="left" data-original-title="Archivos"><img class="reminder">
+      <span class="edit fa fa-download" style="text-align: center; color:#fff; margin-top: -25%"></span>
+    </div>
+
+    <div id="floating-button" data-toggle="tooltip" data-placement="left" data-original-title="Atajos" >
+      <p class="plus">+</p>
+      <span class="edit fa fa-bars" style="text-align: center; color:#fff"></span>
+    </div>
+
+
+  </div>
   <footer>
       <div class="container">
         <div class="row copyright">
@@ -748,6 +826,80 @@
             }
         )
 
+        $(".nd1").click(function () {
+            $("#myModalDow").modal('show')
+        })
+      switch (window.location.hash)
+      {
+          case "#thanks":
+              $("#myModal").modal('show')
+              break;
+      }
+        $('#myModal').on('hidden.bs.modal', function () {
+            window.location="index.html";
+
+        })
+
+        var getaudio = $('#player')[0];
+        /* Get the audio from the player (using the player's ID), the [0] is necessary */
+        var mouseovertimer;
+        /* Global variable for a timer. When the mouse is hovered over the speaker it will start playing after hovering for 1 second, if less than 1 second it won't play (incase you accidentally hover over the speaker) */
+        var audiostatus = 'off';
+        /* Global variable for the audio's status (off or on). It's a bit crude but it works for determining the status. */
+
+        $(document).on('mouseenter', '.speaker', function() {
+          /* Bonus feature, if the mouse hovers over the speaker image for more than 1 second the audio will start playing */
+            if (!mouseovertimer) {
+                mouseovertimer = window.setTimeout(function() {
+                    mouseovertimer = null;
+                    if (!$('.speaker').hasClass("speakerplay")) {
+                        getaudio.load();
+                      /* Loads the audio */
+                        getaudio.play();
+                      /* Play the audio (starting at the beginning of the track) */
+                        $('.speaker').addClass('speakerplay');
+                        return false;
+                    }
+                }, 1000);
+            }
+        });
+
+        $(document).on('mouseleave', '.speaker', function() {
+          /* If the mouse stops hovering on the image (leaves the image) clear the timer, reset back to 0 */
+            if (mouseovertimer) {
+                window.clearTimeout(mouseovertimer);
+                mouseovertimer = null;
+            }
+        });
+
+        $(document).on('click touchend', '.speaker', function() {
+          /* Touchend is necessary for mobile devices, click alone won't work */
+            if (!$('.speaker').hasClass("speakerplay")) {
+                if (audiostatus == 'off') {
+                    $('.speaker').addClass('speakerplay');
+                    getaudio.load();
+                    getaudio.play();
+                    window.clearTimeout(mouseovertimer);
+                    audiostatus = 'on';
+                    return false;
+                } else if (audiostatus == 'on') {
+                    $('.speaker').addClass('speakerplay');
+                    getaudio.play()
+                }
+            } else if ($('.speaker').hasClass("speakerplay")) {
+                getaudio.pause();
+                $('.speaker').removeClass('speakerplay');
+                window.clearTimeout(mouseovertimer);
+                audiostatus = 'on';
+            }
+        });
+
+        $('#player').on('ended', function() {
+            $('.speaker').removeClass('speakerplay');
+          /*When the audio has finished playing, remove the class speakerplay*/
+            audiostatus = 'off';
+          /*Set the status back to off*/
+        });
     </script>
   </body>
 </html>

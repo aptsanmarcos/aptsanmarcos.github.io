@@ -32,7 +32,9 @@
     <source src="img/videoinicial.mp4" type="video/mp4">
   </video>
 
-    <!-- navbar-->
+
+
+  <!-- navbar-->
     <header class="header">
       <div class="sticky-wrapper">
         <div role="navigation" class="navbar navbar-default">
@@ -42,7 +44,7 @@
             </div>
             <div id="index.htmlnavigation" class="collapse navbar-collapse">
               <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="index.html#intro">Inicio</a></li>
+                <li ><a href="index.html#intro">Inicio</a></li>
                 <li>
                   <a href="index.html#about">Nosotros </a>
                 </li>
@@ -50,8 +52,8 @@
                 <li><a href="index.html#portfolio">Multimedia</a></li>
                 <li><a href="index.html#historia">Historia</a></li>
                 <li><a href="index.html#contact">Contáctanos</a></li>
-                <li><a href="#">Certificaciones</a></li>
-                <li><a href="#plan">Plan Estratégico</a></li>
+                <li><a href="#">Certificaciones <span style="background: #46b693; color: #fff; padding: 1px">New </span></a></li>
+                <li class="active"><a href="#plan">Plan Estratégico <span style="background: #46b693; color: #fff; padding: 1px">New </span></a></li>
               </ul>
             </div>
           </div>
@@ -301,17 +303,20 @@
           <div id="container-floating">
 
 
-            <div class="nd4 nds" data-toggle="tooltip" data-placement="left" data-original-title="contract@gmail.com"><img class="reminder">
-              <img class="reminder" src="img/nosotros.png" />
+            <div class="nd4 nds" data-toggle="tooltip" data-placement="left" data-original-title="Contáctanos">
+              <a href="index.html#contact"><img class="reminder" src="img/nosotros.png" /></a>
             </div>
-            <div class="nd3 nds" data-toggle="tooltip" data-placement="left" data-original-title="Reminder">
-              <span class="edit fa fa-facebook" style="text-align: center; color:#fff; margin-top: -25%"></span>
+            <div class="nd3 nds" data-toggle="tooltip" data-placement="left" data-original-title="Facebook">
+              <a href="https://web.facebook.com/josevictor.quirozcastaneda" target="_blank">
+                <span class="edit fa fa-facebook" style="text-align: center; color:#fff; margin-top: -25%"></span>
+
+              </a>
             </div>
-            <div class="nd1 nds" data-toggle="tooltip" data-placement="left" data-original-title="Edoardo@live.it"><img class="reminder">
+            <div class="nd1 nds" data-toggle="tooltip" data-placement="left" data-original-title="Archivos"><img class="reminder">
               <span class="edit fa fa-download" style="text-align: center; color:#fff; margin-top: -25%"></span>
             </div>
 
-            <div id="floating-button" data-toggle="tooltip" data-placement="left" data-original-title="Create" onclick="newmail()">
+            <div id="floating-button" data-toggle="tooltip" data-placement="left" data-original-title="Atajos" >
               <p class="plus">+</p>
               <span class="edit fa fa-bars" style="text-align: center; color:#fff"></span>
             </div>
@@ -336,158 +341,42 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer>  <!-- Modal -->
+  <div id="myModalDow" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title">Nuestro repositorio</h2>
+        </div>
+        <div class="modal-body row">
+          <h4 class="heading">Archivos Internos</h4>
+          <div class="col-md-10 col-md-offset-1">
+            <h5>Nuestro Plan Estratégido <a target="_blank" href="descargas/planestrategico.pdf" style="background: #31708f;">DESCARGA AQUÍ</a></h5>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
     <!-- Javascript files-->
     <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
     <script src="js/jquery.scrollTo.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;amp;sensor=false"></script>
-    <script src="js/gmaps.js"></script>
     <script src="js/jquery.cookie.js"></script>
-    <script src="js/front.js"></script>
     <script>
-        var vid = document.getElementById("bgvid");
 
-        if (window.matchMedia('(prefers-reduced-motion)').matches) {
-            vid.removeAttribute("autoplay");
-            vid.pause();
-        }
-
-        function vidFade() {
-            vid.classList.add("stopfade");
-        }
-
-        vid.addntListener('ended', function()
-        {
-// only functional if "loop" is removed
-            vid.pause();
-// to capture IE10
-            vidFade();
-        });
-
-        /*** Detect the browser's prefixes ***/
-        if(document.addEventListener){ // Only IE9+ support this ;)
-                                       // http://davidwalsh.name/vendor-prefix
-                                       // Can't use it in IE8- as it brakes the page...
-            var isPrefixed = (function () {
-                var styles = window.getComputedStyle(document.documentElement, ''),
-                    pre = (Array.prototype.slice
-                            .call(styles)
-                            .join('')
-                            .match(/-(moz|webkit|ms)-/) || (styles.OLink === '' && ['', 'o'])
-                    )[1],
-                    dom = ('WebKit|Moz|MS|O').match(new RegExp('(' + pre + ')', 'i'))[1];
-                return {
-                    dom: dom,
-                    lowercase: pre,
-                    css: '-' + pre + '-',
-                    js: pre[0].toUpperCase() + pre.substr(1)
-                };
-            })();
-
-            // Deals with prefixes
-            var prefix = isPrefixed.css;
-
-        } else {
-            var prefix = "";
-        }
-
-        /*** Slides ***/
-        var currentSlide = 0,
-            totalSlides  = $(".tl-item").length - 1;
-
-        // Creates the navigation
-        $(".timeline").after("<div class='tl-nav-wrapper'><ul class='tl-nav'></ul></div><a  class='tl-items-arrow-left' style='padding: 20px;'></a><a class='tl-items-arrow-right' style='padding: 20px;'></a>");
-        $( ".tl-copy" ).wrapInner( "<div class='tl-copy-inner'></div>");
-
-        // Cicle through items and creates the nav
-        $(".tl-item").each(function(i) {
-            var year = $(".tl-item:eq(" + i + ")" ).data("year");
-            $(".tl-nav").append("<li><div>" + year + "</div></li>");
-
-            // Click handlers
-            $(".tl-nav li:eq(" + i + ")").click(function() {
-                if(!$(".tl-item:eq(" + i + ")" ).hasClass("tl-active")) {
-                    // Activates the item
-                    $(".tl-item").removeClass("tl-active");
-                    $(".tl-item:eq(" + i + ")" ).addClass("tl-active");
-                    currentSlide = i;
-
-                    // Activates the item nav
-                    $(".tl-nav li").removeClass("tl-active");
-                    $(".tl-nav li:eq(" + i + ")" ).addClass("tl-active");
-                }
-            });
-        });
-
-        // Activates the first slide
-        $(".tl-item:first, .tl-nav li:first").addClass("tl-active");
-
-        // Slide's arrows click handlers
-        $(".tl-items-arrow-left").on("click", function(){
-            if(currentSlide > 0) {
-                currentSlide--;
-
-                // Activates the previous item
-                $(".tl-item").removeClass("tl-active");
-                $(".tl-item:eq(" + currentSlide +")").addClass("tl-active");
-
-                // Activates the previous item nav
-                $(".tl-nav li").removeClass("tl-active");
-                $(".tl-nav li:eq(" + currentSlide + ")" ).addClass("tl-active");
-            }
-        });
-
-        $(".tl-items-arrow-right").on("click", function(){
-            if(currentSlide < totalSlides) {
-                currentSlide++;
-
-                // Activates the next item
-                $(".tl-item").removeClass("tl-active");
-                $(".tl-item:eq(" + currentSlide +")").addClass("tl-active");
-
-                // Activates the next item nav
-                $(".tl-nav li").removeClass("tl-active");
-                $(".tl-nav li:eq(" + currentSlide + ")" ).addClass("tl-active");
-            }
-        });
-
-        /*** Nav ***/
-// The nav's width
-        var navWidth = ($(".tl-nav li").outerWidth(true) * $(".tl-nav li").length) + 36;
-        $(".tl-nav").width(navWidth);
-
-        // The nav's arrows
-        $(".tl-nav-wrapper").append("<a href='#' class='tl-nav-arrow-left'></a><a href='#' class='tl-nav-arrow-right'></a>");
-
-        /*** The timeline's height ***/
-        var vpHeight  = $(window).height();
-        var tlHeight = vpHeight - $(".tl-nav-wrapper").outerHeight(true) - 26;
-        $(".tl-wrapper").height(vpHeight);
-        $(".tl-item").css("max-height", tlHeight);
-        $(".tl-item").height(tlHeight);
-
-        /*** Nav's navigation... ***/
-        var navTranslation = 0;
-        var navLimit = (navWidth - $(".tl-nav-wrapper").outerWidth(true) + 20) * -1;
-
-        // To the left
-        $(".tl-nav-arrow-left").on("click", function() {
-            if(navTranslation < 0) {
-                navTranslation = navTranslation + 86;
-                $(".tl-nav").css(prefix + "transform", "translateX(" + navTranslation + "px)");
-            }
-        });
-
-        // To the right
-        $(".tl-nav-arrow-right").on("click", function() {
-            if(navTranslation >= navLimit) {
-                navTranslation = navTranslation - 86;
-                $(".tl-nav").css(prefix + "transform", "translateX(" + navTranslation + "px)");
-            }
-        });
-
+        $(".nd1").click(function () {
+            $("#myModalDow").modal('show')
+        })
 
     </script>
   </body>
