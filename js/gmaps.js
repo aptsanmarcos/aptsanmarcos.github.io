@@ -152,7 +152,7 @@ var GMaps = (function(global) {
   var GMaps = function(options) {
     if (!this) return new GMaps(options);
 
-    options.zoom = options.zoom || 15;
+    options.zoom = options.zoom || 16;
     options.mapType = options.mapType || 'roadmap';
 
     var self = this,
@@ -1669,7 +1669,7 @@ GMaps.staticMapURL = function(options){
   parameters.push('size=' + size);
 
   if (!options.zoom && options.zoom !== false) {
-    options.zoom = 15;
+    options.zoom = 16;
   }
 
   var sensor = options.hasOwnProperty('sensor') ? !!options.sensor : true;

@@ -76,10 +76,11 @@
                 <li class="active"><a href="#intro">Inicio</a></li>
                 <li><a href="#about">Nosotros </a></li>
                 <li><a href="#services">Servicios</a></li>
-                <li><a href="#portfolio">Productos</a></li>
+                <li><a href="#portfolio">Mutimedia</a></li>
                 <li><a href="#historia">Historia</a></li>
-                <li><a href="#team">Certificaciones</a></li>
-                <li><a href="#contact">¿Eres Socio?</a></li>
+                <li><a href="#contact">Contáctanos</a></li>
+                <li><a href="#">Certificaciones</a></li>
+                <li><a id="plan" href="plan.html">Plan Estratégico</a></li>
               </ul>
             </div>
           </div>
@@ -423,92 +424,14 @@
       </div>
     </section>
     <!-- team-->
-    <section id="team" class="section-gray">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h2 class="heading">Nuestros Clientes</h2>
-            <div class="row"></div>
-            <!-- team-member-->
-            <div class="col-md-3 col-sm-6">
-              <div class="team-member">
-                <div class="image"><a href="#"><img src="img/clientes/exandal.png" alt="" class="img-responsive"></a></div>
-                <h3><a href="#">Exaldan Corp</a></h3>
-                <p class="role">Asociación</p>
-                <div class="social">
-                  <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
-                  <a href="#" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
-                  <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
-                  <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
-                </div>
-                <div class="text">
-                  <p>Aquí descripción de cliente</p>
-                </div>
-              </div>
-            </div>
-            <!-- team-member-->
-            <div class="col-md-3 col-sm-6">
-              <div class="team-member">
-                <div class="image"><a href="#"><img src="img/clientes/exandal.png" alt="" class="img-responsive"></a></div>
-                <h3><a href="#">Exaldan Corp</a></h3>
-                <p class="role">Asociación</p>
-                <div class="social">
-                  <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
-                  <a href="#" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
-                  <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
-                  <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
-                </div>
-                <div class="text">
-                  <p>Aquí descripción de cliente</p>
-                </div>
-              </div>
-            </div>
-            <!-- team-member-->
-            <div class="col-md-3 col-sm-6">
-              <div class="team-member">
-                <div class="image"><a href="#"><img src="img/clientes/exandal.png" alt="" class="img-responsive"></a></div>
-                <h3><a href="#">Exaldan Corp</a></h3>
-                <p class="role">Asociación</p>
-                <div class="social">
-                  <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
-                  <a href="#" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
-                  <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
-                  <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
-                </div>
-                <div class="text">
-                  <p>Aquí descripción de cliente</p>
-                </div>
-              </div>
-            </div>
-            <!-- team-member-->
-            <div class="col-md-3 col-sm-6">
-              <div class="team-member">
-                <div class="image"><a href="#"><img src="img/clientes/exandal.png" alt="" class="img-responsive"></a></div>
-                <h3><a href="#">Exaldan Corp</a></h3>
-                <p class="role">Asociación</p>
-                <div class="social">
-                  <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
-                  <a href="#" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
-                  <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
-                  <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
-                </div>
-                <div class="text">
-                  <p>Aquí descripción de cliente</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
     <!-- map-->
-    <section id="map" class="section-gray"></section>
     <section id="contact" class="section-gray">
+      <section id="map" class="section-gray"></section>
+      <h2 class="heading">Contáctanos</h2>
+
       <div class="container clearfix">
         <div class="row">
           <div class="col-md-12">
-            <h2 class="heading">Contáctanos</h2>
             <div class="row">
               <div class="col-md-6">
                 <form id="contact-form" method="post" action="contact.php" class="contact-form form">
@@ -526,6 +449,12 @@
                           <input type="text" name="surname" id="surname" placeholder="Ingrese sus apellidos" required="required" class="form-control">
                         </div>
                       </div>
+                      <div class="col-sm-6">
+                        <div class="form-group">
+                          <label for="subject">Asunto *</label>
+                          <input type="text" name="subject" id="subject" placeholder="Ingrese el Asunto" required="required" class="form-control">
+                        </div>
+                      </div>
                     </div>
                     <div class="form-group">
                       <label for="email">Tu email/correo *</label>
@@ -536,7 +465,7 @@
                       <textarea rows="4" name="message" id="message" placeholder="Ingrese su mensaje" required="required" class="form-control"></textarea>
                     </div>
                     <div class="text-center">
-                      <input type="submit" value="Enviar mensaje" class="btn btn-primary btn-block">
+                      <input type="submit"  value="Enviar mensaje" class="btn btn-primary btn-block">
                     </div>
                   </div>
                 </form>
@@ -548,6 +477,10 @@
                 <p>
                   Gracias por ayudarnos a ser la empresa que todos necesitamos. Puedes seguirnos en nuestras redes sociales, canales de video, redes fotográficas. ¡Estaremos más conectados que nueca!
                 </p>
+                <p><i class="fa fa-address-book"></i> Dirección: Jr. Amorin Bueno S/N, San Marcos, Cajamarca</p>
+                <p> <i class="fa fa-phone-square"></i> Telefonos: (076)558336 Cel.: 976317573 - 981794211</p>
+                <p> <i class="fa fa-mail-forward"></i>Correo: <a style="color:#6c91ff" target="_top" href="mailto:cooperativaaptdelnorte@gmail.com?Subject=Consulta%20desde%20Web">cooperativaaptdelnorte@gmail.com</a> </p>
+                <p> <i class="fa fa-calendar"></i> Horario de atención: Lunes - Sábado / 8:00 AM - 7:00 PM</p>
                 <p class="social"><a href="#" title="" class="facebook"><i class="fa fa-facebook"></i></a><a href="#" title="" class="twitter"><i class="fa fa-twitter"></i></a><a href="#" title="" class="gplus"><i class="fa fa-google-plus"></i></a><a href="#" title="" class="instagram"><i class="fa fa-instagram"></i></a><a href="#" title="" class="email"><i class="fa fa-envelope"></i></a></p>
               </div>
             </div>
@@ -555,7 +488,87 @@
         </div>
       </div>
     </section>
-    <footer>
+  <section id="team" class="section-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="heading">Nuestros Clientes</h2>
+          <div class="row"></div>
+          <!-- team-member-->
+          <div class="col-md-3 col-sm-6">
+            <div class="team-member">
+              <div class="image"><a href="#"><img src="img/clientes/exandal.png" alt="" class="img-responsive"></a></div>
+              <h3><a href="#">Exaldan Corp</a></h3>
+              <p class="role">Asociación</p>
+              <div class="social">
+                <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
+                <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
+              </div>
+              <div class="text">
+                <p>Aquí descripción de cliente</p>
+              </div>
+            </div>
+          </div>
+          <!-- team-member-->
+          <div class="col-md-3 col-sm-6">
+            <div class="team-member">
+              <div class="image"><a href="#"><img src="img/clientes/exandal.png" alt="" class="img-responsive"></a></div>
+              <h3><a href="#">Exaldan Corp</a></h3>
+              <p class="role">Asociación</p>
+              <div class="social">
+                <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
+                <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
+              </div>
+              <div class="text">
+                <p>Aquí descripción de cliente</p>
+              </div>
+            </div>
+          </div>
+          <!-- team-member-->
+          <div class="col-md-3 col-sm-6">
+            <div class="team-member">
+              <div class="image"><a href="#"><img src="img/clientes/exandal.png" alt="" class="img-responsive"></a></div>
+              <h3><a href="#">Exaldan Corp</a></h3>
+              <p class="role">Asociación</p>
+              <div class="social">
+                <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
+                <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
+              </div>
+              <div class="text">
+                <p>Aquí descripción de cliente</p>
+              </div>
+            </div>
+          </div>
+          <!-- team-member-->
+          <div class="col-md-3 col-sm-6">
+            <div class="team-member">
+              <div class="image"><a href="#"><img src="img/clientes/exandal.png" alt="" class="img-responsive"></a></div>
+              <h3><a href="#">Exaldan Corp</a></h3>
+              <p class="role">Asociación</p>
+              <div class="social">
+                <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
+                <a href="#" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
+                <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
+                <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
+              </div>
+              <div class="text">
+                <p>Aquí descripción de cliente</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
       <div class="container">
         <div class="row copyright">
           <div class="col-md-6">
@@ -573,7 +586,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
     <script src="js/jquery.scrollTo.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;amp;sensor=false"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzv2kabAMKpFI8OWcxv2alryjLl-OOWsc"></script>
     <script src="js/gmaps.js"></script>
     <script src="js/jquery.cookie.js"></script>
     <script src="js/front.js"></script>
@@ -584,7 +597,17 @@
             vid.removeAttribute("autoplay");
             vid.pause();
         }
+        function sendCorreo() {
+            function sendMail() {
+                var link = "mailto:me@example.com"
+                    + "?cc=myCCaddress@example.com"
+                    + "&subject=" + escape("This is my subject")
+                    + "&body=" + escape(document.getElementById('myText').value)
+                ;
 
+                window.location.href = link;
+            }
+        }
         function vidFade() {
             vid.classList.add("stopfade");
         }
@@ -719,6 +742,11 @@
             }
         });
 
+        $("#plan").click(
+            function () {
+                window.location="plan.html";
+            }
+        )
 
     </script>
   </body>

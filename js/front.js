@@ -49,8 +49,8 @@ function map() {
     var styles = [{"featureType": "landscape", "stylers": [{"saturation": -100}, {"lightness": 65}, {"visibility": "on"}]}, {"featureType": "poi", "stylers": [{"saturation": -100}, {"lightness": 51}, {"visibility": "simplified"}]}, {"featureType": "road.highway", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "road.arterial", "stylers": [{"saturation": -100}, {"lightness": 30}, {"visibility": "on"}]}, {"featureType": "road.local", "stylers": [{"saturation": -100}, {"lightness": 40}, {"visibility": "on"}]}, {"featureType": "transit", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "administrative.province", "stylers": [{"visibility": "off"}]}, {"featureType": "water", "elementType": "labels", "stylers": [{"visibility": "on"}, {"lightness": -25}, {"saturation": -100}]}, {"featureType": "water", "elementType": "geometry", "stylers": [{"hue": "#ffff00"}, {"lightness": -25}, {"saturation": -97}]}];
     map = new GMaps({
         el: '#map',
-        lat: -12.043333,
-        lng: -77.028333,
+        lat: -7.337404,
+        lng: -78.173961,
         zoomControl: true,
         zoomControlOpt: {
             style: 'SMALL',
@@ -68,12 +68,15 @@ function map() {
     var image = 'img/marker.png';
 
     map.addMarker({
-        lat: -12.043333,
-        lng: -77.028333,
+        lat: -7.337404,
+        lng: -78.173961,
         icon: image,
         title: '',
         infoWindow: {
-            content: '<p>HTML Content</p>'
+            content: '  <p><i class="fa fa-address-book"></i> Dirección: Jr. Amorin Bueno S/N, San Marcos, Cajamarca</p>' +
+            '<p> <i class="fa fa-phone-square"></i> Telefonos: (076)558336 Cel.: 976317573 - 981794211</p>'+
+            '<p> <i class="fa fa-mail-forward"></i> Correo: cooperativaaptdelnorte@gmail.com</p>'+
+            '<p> <i class="fa fa-calendar"></i> Horario de atención: Lunes - Sábado / 8:00 AM - 7:00 PM</p>'
         }
     });
 }
